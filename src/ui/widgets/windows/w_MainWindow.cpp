@@ -704,7 +704,7 @@ void MainWindow::OnConnected(const ConnectionGroupPair &id)
     GlobalConfig.uiConfig.recentConnections.push_front(id);
     ReloadRecentConnectionList();
     //
-    QTimer::singleShot(1000, ConnectionManager, [id]() {
+    QTimer::singleShot(250, ConnectionManager, [id]() {
         // After the kernel initialization is complete, we can test the delay without worry
         if (GlobalConfig.advancedConfig.testLatencyOnConnected)
         {

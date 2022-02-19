@@ -117,7 +117,7 @@ void ConnectionItemWidget::OnConnected(const ConnectionGroupPair &id)
 {
     if (id == ConnectionGroupPair{ connectionId, groupId })
     {
-        connNameLabel->setText("● " + originalItemName);
+        connNameLabel->setText(originalItemName + " ◄");
         DEBUG("ConnectionItemWidgetOnConnected signal received for: " + id.connectionId.toString());
         emit RequestWidgetFocus(this);
     }

@@ -884,7 +884,7 @@ void PreferencesWindow::on_qvProxyPortCB_valueChanged(int arg1)
     CurrentConfig.networkConfig.port = arg1;
 }
 
-void PreferencesWindow::on_setTestlatencyCB_stateChanged(int arg1)
+void PreferencesWindow::on_setTestLatencyCB_stateChanged(int arg1)
 {
     LOADINGCHECK
     if (arg1 == Qt::Checked)
@@ -894,7 +894,7 @@ void PreferencesWindow::on_setTestlatencyCB_stateChanged(int arg1)
     CurrentConfig.advancedConfig.testLatencyPeriodically = arg1 == Qt::Checked;
 }
 
-void PreferencesWindow::on_setTestlatencyOnConnectedCB_stateChanged(int arg1)
+void PreferencesWindow::on_setTestLatencyOnConnectedCB_stateChanged(int arg1)
 {
     LOADINGCHECK
     if (arg1 == Qt::Checked)
