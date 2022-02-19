@@ -196,7 +196,7 @@ void ConnectionItemWidget::OnConnectionItemRenamed(const ConnectionId &id, const
 {
     if (id == connectionId)
     {
-        connNameLabel->setText((ConnectionManager->IsConnected({ connectionId, groupId }) ? "● " : "") + newName);
+        connNameLabel->setText(newName + (ConnectionManager->IsConnected({ connectionId, groupId }) ? " ◄" : ""));
         originalItemName = newName;
         const auto conn = ConnectionManager->GetConnectionMetaObject(connectionId);
         this->setToolTip(newName +                                                             //
